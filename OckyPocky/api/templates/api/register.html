@@ -1,0 +1,75 @@
+{% extends "api/base.html" %}
+
+{% block content %}
+<main class="login-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Register</div>
+                    <div class="card-body">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="username" class="form-control" name="username" required autofocus>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="email" class="form-control" name="email" required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password1" class="col-md-4 col-form-label text-md-right">Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password1" class="form-control" name="password1" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password2" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="password2" class="form-control" name="password2" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                                <a href="{% url 'login' %}" class="btn btn-link">
+                                    Already have an account?
+                                </a>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</main>
+
+{% endblock %}
+
+
+
+
+<h2>Register</h2>
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        {{ field.label}}
+        {{ field }}
+        <br><br>
+    {% endfor %}
+    <input type="submit">
+</form>
+{{ form.errors }}
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>

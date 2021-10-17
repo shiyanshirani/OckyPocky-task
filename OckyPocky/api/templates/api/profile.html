@@ -1,0 +1,15 @@
+{% extends "api/base.html" %}
+
+{% block content %}
+
+<div class="welcome-profile">
+    <h1>Welcome back {{ request.user }}!</h1>
+    <button type="submit" class="btn btn-light">
+        <a href="{% url 'logout' %}">Logout</a>
+    </button>
+    <button type="submit" class="btn btn-light">
+        <a href="{% url 'update_password' %}">Update Password</a>
+    </button>
+</div>
+    
+{% endblock %}
