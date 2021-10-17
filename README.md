@@ -11,6 +11,20 @@ Create a Website Login flow using Authentication.
 
 `Submission deadline: 18 October, 2021`
 
+## Appendix
+
+I have developed this cluster of API using Django-Rest-Framework. All endpoints are designed in
+an authenticaed manner so as the user is unable to jump pages without gaining required/proper
+pre-requisite.\
+\
+This API is using built-in Django's authentication methods for example login, logout, etc.
+Updating password or reseting password is all done using Django's built forms so as to follow DRY _(Don't Repeat Yourself)_ code.
+\
+\
+Each view is protected with a `login_required` decorator so that the view cannot be triggered without having permissions.
+
+P.S - This project this using `dotenv` package inorder to project sensitive keys. I am sending you the .env file attached with the repository in order to use SMTP services.
+
 ## API Reference
 
 #### Register user
