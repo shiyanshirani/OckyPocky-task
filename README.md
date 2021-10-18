@@ -116,8 +116,8 @@ Run server locally
 
 ## Screenshots
 
-<!-- ![Register Screenshot](OckyPocky/assets/register.png)
-![Login Screenshot](OckyPocky/assets/login.png) -->
+![Register Screenshot](OckyPocky/assets/register.png)
+![Login Screenshot](OckyPocky/assets/login.png)
 
 ## Tech Stack
 
